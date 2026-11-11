@@ -1,5 +1,3 @@
-# main.py
-
 from blog.modelos import Blog, Autor, Post
 from blog.datos import cargar_posts, guardar_posts
 from blog.menu import mostrar_menu
