@@ -1,46 +1,151 @@
 # blog_consola
 
-Sistema de blog por consola organizado en módulos.
+Sistema de gestión de blog por consola desarrollado en Python.
 
-## Qué hace
-Permite listar posts, buscar por título, filtrar por etiqueta y validar la estructura de los posts.
+## Descripción
 
-## Cómo ejecutar
-1. Colocar la carpeta `blog_consola` en tu equipo.
-2. Abrir terminal en la carpeta raíz `blog_consola`.
-3. Ejecutar:
+Esta versión del proyecto incorpora Programación Orientada a Objetos (POO) y persistencia mediante archivos JSON.
 
-## Estructura
-- `main.py` : Orquesta la ejecución y muestra el menú.
-- `blog/` : Paquete con módulos:
-  - `datos.py` : Datos base (perfil_autor, estados_post, etiquetas_blog, posts).
-  - `menu.py` : Función para mostrar el menú y leer la opción.
-  - `operaciones.py` : Funciones listar_posts, buscar_por_titulo, filtrar_por_etiqueta.
-  - `validaciones.py` : Función validar_post.
+El sistema permite gestionar publicaciones de un blog desde consola, realizando búsquedas, filtrados, validaciones y guardado de datos.
 
-## Notas
-- Un post en `datos.py` incluye errores intencionales para probar la validación.
-- Las búsquedas y filtros usan `.lower()` para ignorar mayúsculas/minúsculas.
+## Clases principales
 
-# Clonar o copiar el proyecto (si está en GitHub)
-git clone <URL-del-repositorio>
+### Autor
+
+Representa al autor de una publicación.
+
+Atributos:
+
+- nombre
+- bio
+- especialidad
+- redes_sociales
+
+### Post
+
+Representa una publicación del blog.
+
+Atributos:
+
+- id
+- titulo
+- contenido
+- autor
+- tags
+- estado
+
+Cada post contiene una instancia de la clase Autor.
+
+### Blog
+
+Centraliza la lógica principal del sistema.
+
+Permite:
+
+- listar posts
+- buscar por título
+- filtrar por tag
+- agregar nuevos posts
+- obtener todos los posts
+
+## Persistencia JSON
+
+Los datos se almacenan en el archivo:
+
+```text
+posts.json
+```
+
+Al iniciar el programa:
+
+- se cargan los datos desde `posts.json`
+- los diccionarios se convierten en objetos
+
+Al guardar:
+
+- los objetos se convierten nuevamente en diccionarios
+- los datos se almacenan en `posts.json`
+
+## Estructura del proyecto
+
+```text
+blog_consola/
+│
+├── main.py
+├── README.md
+├── posts.json
+├── .gitignore
+│
+└── blog/
+    ├── __init__.py
+    ├── datos.py
+    ├── menu.py
+    ├── modelos.py
+    ├── operaciones.py
+    └── validaciones.py
+```
+
+## Funcionalidades
+
+1. Ver todos los posts.
+2. Buscar por título.
+3. Filtrar por tag.
+4. Crear nuevo post.
+5. Validar posts.
+6. Guardar posts en JSON.
+7. Salir.
+
+## Cómo ejecutar el proyecto
+
+Desde la carpeta raíz:
+
+```bash
+python main.py
+```
+
+## Instalación en otro equipo
+
+Clonar el repositorio:
+
+```bash
+git clone https://github.com/ZaftheR/blog_consola.git
 cd blog_consola
+```
 
-# (Opcional) Crear y activar un entorno virtual
-# Windows
+Opcionalmente crear un entorno virtual:
+
+### Windows
+
+```bash
 python -m venv env
 env\Scripts\activate
+```
 
-# macOS / Linux
+### Linux / macOS
+
+```bash
 python3 -m venv env
 source env/bin/activate
+```
 
-# Instalar dependencias (si existe requirements.txt)
-pip install -r requirements.txt
+Ejecutar el programa:
 
-# Ejecutar el programa
+```bash
 python main.py
+```
 
-# Al terminar, salir del entorno virtual (si lo activaste)
+Salir del entorno virtual:
+
+```bash
 deactivate
+```
 
+## Cambios respecto a la versión anterior
+
+- Se incorporó Programación Orientada a Objetos.
+- Se agregaron las clases Autor, Post y Blog.
+- Se incorporó persistencia mediante JSON.
+- Los posts se cargan desde `posts.json`.
+- Los posts pueden guardarse en `posts.json`.
+- La lógica principal se centralizó en la clase Blog.
+- Se mantuvo la estructura modular del proyecto.
