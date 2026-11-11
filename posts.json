@@ -1,0 +1,55 @@
+[
+    {
+        "id": 1,
+        "titulo": "El jamon del sanguche",
+        "contenido": "El jamon del maldito sangunche, libro de la secundaria cual leimos muchas veces y nunca termine de entender",
+        "autor": {
+            "nombre": "mi yo del pasado",
+            "bio": "autor reconocido",
+            "especialidad": "Literaruta, Novela; Teens",
+            "redes_sociales": [
+                ""
+            ]
+        },
+        "tags": [
+            "Literatura",
+            " Novela",
+            " Teens"
+        ],
+        "estado": "publicado"
+    },
+    {
+        "id": 2,
+        "titulo": "Matriz",
+        "contenido": "matris de los modelos",
+        "autor": {
+            "nombre": "NicolAS",
+            "bio": "nico",
+            "especialidad": "",
+            "redes_sociales": [
+                ""
+            ]
+        },
+        "tags": [
+            "literatura"
+        ],
+        "estado": "publicado"
+    },
+    {
+        "id": 3,
+        "titulo": "gustavo",
+        "contenido": "gustavoi",
+        "autor": {
+            "nombre": "gustavi",
+            "bio": "",
+            "especialidad": "",
+            "redes_sociales": [
+                ""
+            ]
+        },
+        "tags": [
+            "tectil"
+        ],
+        "estado": "borrador"
+    }
+]
